@@ -1,0 +1,10 @@
+{
+  "name": "fantasy-baseball-scrape",
+  "version": "0.0.1",
+  "description": "Fantasy Baseball Data",
+  "dependencies": {
+    "async": "^2.0.0-rc.3",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4"
+  }
+}

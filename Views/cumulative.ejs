@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Daytuh</title>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+	<!-- <link rel="stylesheet" href="css/styles.css"> -->
+	<link rel="stylesheet" href="css/multiLine.css">
+</head>
+<body>
+
+    <div class="container">
+    	<div id="runsMultiLine"><svg></svg></div>
+	    <div id="homerunsMultiLine"><svg></svg></div>
+	    <div id="rbiMultiLine"><svg></svg></div>
+	    <div id="stolenbasesMultiLine"><svg></svg></div>
+	    <div id="avgMultiLine"><svg></svg></div>
+	    <div id="winsMultiLine"><svg></svg></div>
+	    <div id="strikeoutsMultiLine"><svg></svg></div>
+	    <div id="savesMultiLine"><svg></svg></div>
+	    <div id="eraMultiLine"><svg></svg></div>
+	    <div id="whipMultiLine"><svg></svg></div>
+    </div>
+
+</body>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://d3js.org/d3.v2.min.js"></script>
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.3/d3-tip.min.js"></script> -->
+	<script>
+		var matchupData = <%- JSON.stringify(data) %>;
+	</script>
+	<script src="js/graphs/barGraph.js"></script>
+	<script src="js/graphs/multiLine.js"></script>
+	<script src="js/teamNames.js"></script>
+	<script src="js/cumulative.js"></script>
+</html>
