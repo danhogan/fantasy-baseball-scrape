@@ -1,13 +1,14 @@
 var request = require('request');
 var cheerio = require('cheerio');
 var async = require('async');
+var leagueId = 109780; //change this to the leagueId in the url of your league's homepage
 
 module.exports = {
 	get: function(seasonYear, callbackToMain){
 		var weekArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]; //21 matchups/weeks + 2 playoff matchups
 
 		async.map(weekArray, function(weekNumber, callback){
-			request('http://games.espn.go.com/flb/scoreboard?leagueId=109780&seasonId=' + seasonYear + '&matchupPeriodId=' + weekNumber, function (error, response, html) {
+			request('http://games.espn.go.com/flb/scoreboard?leagueId=' + leagueId + '&seasonId=' + seasonYear + '&matchupPeriodId=' + weekNumber, function (error, response, html) {
 			  	if (!error && response.statusCode == 200) {
 			    	processHTML(html, function(data){
 				    	console.log("finished week number " + weekNumber);
